@@ -2,37 +2,35 @@
 ![画像1](/readme-img/Screen1.png)
 
 ## 概要
-* [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)の『SNS連携（Facebook連携）』を利用して、Facebookのログイン機能を実装したサンプルプロジェクトです。
-* Facebook連携で取得した会員データは[ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)の『会員管理機能』として扱うことができます。
- * [【Android】アプリのログイン機能](https://github.com/ncmbadmin/android_login_demo)も用意していますので、参照ください。
-* このコンテンツは簡単な操作ですぐに [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)の機能を体験いただけます。
+* [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の『SNS連携（Facebook連携）』を利用して、Facebookのログイン機能を実装したサンプルプロジェクトです。
+* Facebook連携で取得した会員データは[ニフクラ mobile backend](https://mbaas.nifcloud.com/)の『会員管理機能』として扱うことができます。
+ * [【Android】アプリのログイン機能](https://github.com/NIFCLOUD-mbaas/android_login_demo)も用意していますので、参照ください。
+* このコンテンツは簡単な操作ですぐに [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の機能を体験いただけます。
 
-## ニフティクラウドmobile backendについて
+## ニフクラ mobile backendについて
 スマートフォンアプリのバックエンド機能（プッシュ通知・データストア・会員管理・ファイルストア・SNS連携・位置情報検索・スクリプト）が**開発不要**、しかも基本**無料**(注1)で使えるクラウドサービス！今回はデータストアを体験します。
 
-注1：詳しくは[こちら](http://mb.cloud.nifty.com/price.htm)をご覧ください。
+注1：詳しくは[こちら](https://mbaas.nifcloud.com/price.htm)をご覧ください。
 
 ![画像2](/readme-img/Screen2.png)
 
 ## 動作環境
-* Windows 7 Professional
-* Facebook SDK 4.12.1
-* Android Studio 1.5
-* Android ver 4x,5x
+* MacOS Mojave v10.14.6 (18G103)
+* Android studio: 3.4.1
+* Simulator: Pixel 2 Android OS Version 10
 
 ※上記内容で動作確認をしています。
-※古いバージョンだと動作しない可能性があります。
 
 
 ## 手順
-### 1. [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)の会員登録とアプリ作成
+### 1. [ニフクラ mobile backend](https://mbaas.nifcloud.com/signup.htm)の会員登録とアプリ作成
 
 * 上記リンクから会員登録（無料）をします。登録ができたらログインをすると下図のように「アプリの新規作成」画面が出るのでアプリを作成します。
 
 ![画像3](/readme-img/Screen3.png)
 
 * アプリ作成されると下図のような画面になります。
-* この２種類のAPIキー（アプリケーションキーとクライアントキー）はAndroidアプリに[ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)を紐付けるために使用します。
+* この２種類のAPIキー（アプリケーションキーとクライアントキー）はAndroidアプリに[ニフクラ mobile backend](https://mbaas.nifcloud.com/)を紐付けるために使用します。
 
 ![画像4](/readme-img/Screen4.png)
 
@@ -40,9 +38,9 @@
 
 ![画像5](/readme-img/Screen5.png)
 
-### 2. [GitHub](https://github.com/ncmbadmin/android_facebook_demo.git)からサンプルプロジェクトのダウンロード
+### 2. [GitHub](https://github.com/NIFCLOUD-mbaas/android_facebook_demo.git)からサンプルプロジェクトのダウンロード
 
-* プロジェクトの[Githubページ](https://github.com/ncmbadmin/android_facebook_demo.git)から「Clone or download」＞「Download ZIP」をクリックします。
+* プロジェクトの[Githubページ](https://github.com/NIFCLOUD-mbaas/android_facebook_demo.git)から「Clone or download」＞「Download ZIP」をクリックします。
 * プロジェクトを解凍します。
 
 ### 3. AndroidStudioでアプリを起動
@@ -54,7 +52,7 @@
 ### 4. APIキーの設定
 
 * `MainActivity.java`を編集します。
-* 先程[ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)のダッシュボード上で確認したAPIキーを貼り付けます。
+* 先程[ニフクラ mobile backend](https://mbaas.nifcloud.com/)のダッシュボード上で確認したAPIキーを貼り付けます。
 
 ![画像07](/readme-img/Screen7.png)
 
@@ -66,37 +64,41 @@
 
 * [facebook for developers](https://developers.facebook.com/)にログイン（Facebookアカウントがない場合はアカウントを作成）して、右上の「マイアプリ」からの「新しいアプリを追加」を選択します。
 
-![画像10](/readme-img/Screen10.png)
 
-* Androidを選択し、アプリ名（任意）を入力し、「新しいFacebookアプリIDを作成」をクリックします。
-* 「連絡先メールアドレス」と「カテゴリ」を入力して「アプリIDを作成」をクリックしてFacebookアプリを作成します。
-* Securityチェック欄には質問の対象画像を全て選択し、「確定」をクリックします。
+![画像0001](/readme-img/fb_0001.png)
 
-![画像11](/readme-img/Screen11.png)
+* `Build Connected Experiences`を選択して、`Continue`で続きます。
 
-* 「Quick Start for Android」の画面が出ます。
-* 一番右上の「Skip Quick Start」をクリックします。
+![画像0002](/readme-img/fb_0002.png)
 
-![画像12](/readme-img/Screen12.png)
+* アプリ名を`App Display Name`に入力してから`Create App`でアプリを作ります。
 
-* ダッシュボードが表示されます。
-  * `アプリID`を記憶します。
+![画像0003](/readme-img/fb_0003.png)
 
-![画像13](/readme-img/Screen13.png)
+* `Security Check`の認証のところで`Verify`したら、`Submit`で完了します。
+
+![画像0004](/readme-img/fb_0004.png)
+
+* アプリ管理の画面で作成したアプリが確認できます。
+
+![画像0005](/readme-img/fb_0005.png)
 
 * `アプリID`の設定します。
   * `/app/src/main/res/values/strings.xml`を編集します。
 
 ![画像8](/readme-img/Screen8.png)
 
-* またこの`アプリID`は[ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)にも設定します。
+* またこの`アプリID`は[ニフクラ mobile backend](https://mbaas.nifcloud.com/)にも設定します。
    * 左側のメニューから、「アプリ設定」を開き、SNS連携の設定を開きます。
    * 連携の許可にチェックを入れた上で、Facebookの開発者向けサイトで発行されたアプリIDを入力してください。
    * 「保存する」をクリックします。
 
 ![画像9](/readme-img/Screen9.png)
 
-* 最後に「アプリレビュー」をクリックし、「***アプリ名***を公開しますか？」を「***はい***」にしておきます。
+* 最後に「Basic」をクリックし、「Privacy policy URL」 を貼って、「Save」ボタンを押します。
+* その後、上の「In development」にSwitchしますし、ポップアップの「Switch mode」を選びます。
+これでアプリの公開は完了します。
+
 
 ![画像14](/readme-img/Screen14.png)
 
@@ -133,7 +135,7 @@
 
 -----
 
-* 保存に成功したら、[ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)のダッシュボードから「会員管理」を確認してみましょう！
+* 保存に成功したら、[ニフクラ mobile backend](https://mbaas.nifcloud.com/)のダッシュボードから「会員管理」を確認してみましょう！
 * `authData`にはアクセストークンが保存されます。
 
 ![画像17](/readme-img/Screen17.png)
@@ -149,7 +151,7 @@
 サンプルプロジェクトに実装済みの内容のご紹介
 
 #### SDKのインポートと初期設定
-* ニフティクラウドmobile backend の[Android ドキュメント（クイックスタート）](http://mb.cloud.nifty.com/doc/current/introduction/quickstart_android.html#/Android/)に開発中のアプリを連携する手順ご用意していますので、ご活用ください。
+* ニフクラ mobile backend の[Android ドキュメント（クイックスタート）](https://mbaas.nifcloud.com/doc/current/introduction/quickstart_android.html#/Android/)に開発中のアプリを連携する手順ご用意していますので、ご活用ください。
 
 * [Android用Facebookログイン](https://developers.facebook.com/docs/facebook-login/android)と合わせてご活用ください。
 
@@ -165,16 +167,16 @@ import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
-import com.nifty.cloud.mb.core.NCMB;
-import com.nifty.cloud.mb.core.NCMBException;
-import com.nifty.cloud.mb.core.NCMBFacebookParameters;
-import com.nifty.cloud.mb.core.NCMBUser;
+import com.nifcloud.mbaas.core.NCMB;
+import com.nifcloud.mbaas.core.NCMBException;
+import com.nifcloud.mbaas.core.NCMBFacebookParameters;
+import com.nifcloud.mbaas.core.NCMBUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //**************** APIキーの設定とSDKの初期化 **********************
-        NCMB.initialize(this, "YOUR_APPLICATION_KEY", "YOUR_CLIENT_KEY");
+        NCMB.initialize(this.getApplicationContext(), "YOUR_APPLICATION_KEY", "YOUR_CLIENT_KEY");
 
         // Facebook settings
         FacebookSdk.sdkInitialize(getApplicationContext());
@@ -190,7 +192,7 @@ import com.nifty.cloud.mb.core.NCMBUser;
                     @Override
                     public void onSuccess(LoginResult loginResult) {
 
-                        //Login to NIFTY Cloud mobile backend
+                        //Login to NIFCLOUD mobile backend
                         NCMBFacebookParameters parameters = new NCMBFacebookParameters(
                                 loginResult.getAccessToken().getUserId(),
                                 loginResult.getAccessToken().getToken(),
@@ -198,7 +200,7 @@ import com.nifty.cloud.mb.core.NCMBUser;
                         );
                         try {
                             NCMBUser.loginWith(parameters);
-                            Toast.makeText(getApplicationContext(), "Login to NIFTY Cloud mbaas with Facebook account", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Login to NIFCLOUD mbaas with Facebook account", Toast.LENGTH_LONG).show();
                         } catch (NCMBException e) {
                             e.printStackTrace();
                         }
@@ -285,13 +287,13 @@ import com.nifty.cloud.mb.core.NCMBUser;
 ```
 
 ## 参考
-### FacebookSDKを使ってFacebook会員認証するのとニフティクラウドmobile backendSDKを使ってFacebook会員認証するのは何が違うのか？
+### FacebookSDKを使ってFacebook会員認証するのとニフクラ mobile backendSDKを使ってFacebook会員認証するのは何が違うのか？
 
 ![画像19](/readme-img/Screen19.png)
 
-* もちろん直接FacebookSDKを呼ぶことも可能ですが、ニフティクラウドmobile backendSDKを呼べば裏でFacebookSDKを呼んで処理するので、１つ呼べば、Facebookへのログインとニフティクラウドmobile backendへ会員情報保存が同時に行えるので一石二鳥というわけです。
-* また一度会員登録してしまえば、あとはニフティクラウドmobile backendの会員管理機能で処理が行えるので自前で会員管理システムを構築する必要がなくより楽に開発を行えます。
+* もちろん直接FacebookSDKを呼ぶことも可能ですが、ニフクラ mobile backendSDKを呼べば裏でFacebookSDKを呼んで処理するので、１つ呼べば、Facebookへのログインとニフクラ mobile backendへ会員情報保存が同時に行えるので一石二鳥というわけです。
+* また一度会員登録してしまえば、あとはニフクラ mobile backendの会員管理機能で処理が行えるので自前で会員管理システムを構築する必要がなくより楽に開発を行えます。
 
 ### もっと深く知りたい方へ
-* ニフティクラウドmobile backend の[ドキュメント（SNS連携：Facebook連携）](http://mb.cloud.nifty.com/doc/current/sns/facebook_android.html#/Android/)をご用意していますので、ご活用ください。
+* ニフクラ mobile backend の[ドキュメント（SNS連携：Facebook連携）](https://mbaas.nifcloud.com/doc/current/sns/facebook_android.html#/Android/)をご用意していますので、ご活用ください。
 * Facebook開発の [ドキュメント(Android用Facebookログイン)](https://developers.facebook.com/docs/facebook-login/android)参照ください。
